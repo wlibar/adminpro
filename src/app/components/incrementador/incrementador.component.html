@@ -1,0 +1,13 @@
+<h3> {{ leyenda }} </h3>
+<div class="input-group">
+    <!-- boton izquierdo -->
+    <div class="input-group-append" id="button-addon4">
+        <button (click)="cambiarValor(-5)" class="btn btn-outline-primary" type="button"><i class="mdi mdi-minus"></i></button>
+    </div>
+    <!-- caja de en medio -->
+    <input #txtProgress type="number" class="form-control" aria-describedby="button-addon4" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChanges($event)" min="1" max="100">
+    <!-- boton derecho -->
+    <div class="input-group-append" id="button-addon4">
+        <button (click)="cambiarValor(+5)" class="btn btn-outline-primary" type="button"><i class="mdi mdi-plus"></i></button>
+    </div>
+</div>
