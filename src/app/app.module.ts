@@ -7,15 +7,17 @@ import { APP_ROUTES } from './app.routes';
 // Modules
 import { PagesModule } from './pages/pages.module';
 
+// Servicios
+// import { SettingsService } from './services/service.index';
+import { ServiceModule } from './services/service.module';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
-// import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 
 // Temporal
 import { FormsModule } from '@angular/forms';
-//import { GraficoDonaComponent } from './components/grafico-dona/grafico-dona.component';
 
 
 @NgModule({
@@ -24,14 +26,13 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     RegisterComponent
-    // GraficoDonaComponent,
-    // IncrementadorComponent,
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
